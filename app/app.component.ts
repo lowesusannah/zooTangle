@@ -35,6 +35,7 @@ beerImg(currentKeg) {
   }
 }
 
+
 pourBeer(currentKeg) {
   return currentKeg.pints--;
 }
