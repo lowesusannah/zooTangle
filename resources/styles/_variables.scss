@@ -11,3 +11,19 @@ h3 {
   @extend h1;
   font-size: 2em;
 }
+
+.beer:nth-child(1) {
+  font-family: 'Shadows Into Light', cursive;
+}
+
+.beer:nth-child(2) {
+  font-family: 'Permanent Marker', cursive;
+}
+
+.beer:nth-child(3) {
+  font-family: 'Nothing You Could Do', cursive;
+}
+
+.beer:nth-child(4) {
+  font-family: 'Gochi Hand', cursive;
+}

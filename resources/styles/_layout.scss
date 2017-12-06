@@ -1,3 +1,7 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 body {
   background-image: url("https://cdn.stocksnap.io/img-thumbs/960w/9EFACE8DD3.jpg");
   width: 100%;
@@ -17,17 +21,47 @@ body {
 }
 
 .beer-container {
-  height: 300px;
-  width: 95%;
+  height: 500px;
+  width: 83%;
+  margin-left: 95px;
+  margin-top: 40px;
   display: flex;
   justify-content:space-around;
   flex-wrap: wrap;
 }
 
 .beer {
-  height: 100px;
-  width: 40%;
-  background-color: lightblue;
+  height: 210px;
+  width: 45%;
+  background-color: rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
   display: flex;
-  margin: 10px;
+  flex-wrap: wrap;
+  align-self: center;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.beer-light {
+  background-image: url("/resources/img/beer-light.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50px;
+  background-position: center;
+  height: 70px;
+  width: 100px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 100%;
+}
+.beer-dark {
+  background-image: url("/resources/img/beer-dark.png");
+  @extend .beer-light;
+}
+
+button {
+
 }
