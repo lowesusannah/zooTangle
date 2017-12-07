@@ -12,7 +12,7 @@ import { Keg } from './keg.model';
     <keg-list [childKegList]="masterKegList" (editSender)="editKeg($event);" (pourSender)="pourBeer($event)" (growlerSender)="pourGrowler($event)"></keg-list>
   </div>
   <edit-keg [childSelectedKeg]="selectedKeg" (doneButtonClickedSender)="finishedEditing"></edit-keg>
-  <button type="button" name="add">Add Keg</button>
+  <new-keg (newKegSender)="addKeg($event)"></new-keg>
    `
 })
 
@@ -42,6 +42,10 @@ pourBeer(currentKeg) {
 
 pourGrowler(currentKeg) {
   return currentKeg.pints-=2;
+}
+
+addKeg(newKegFromChild: Keg) {
+  this.masterKegList.push(newKegFromChild);
 }
 
 }
