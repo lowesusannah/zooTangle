@@ -4,9 +4,16 @@ import { Keg } from './keg.model';
 @Component ({
   selector: 'keg-list',
   template: `
-  <div class="beer" *ngFor="let currentKeg of childKegList">
+  <div class="keg-selector">
+    <select (change)="onChange($event.target.value)">
+      <option value="allKegs"selected="selected">All Kegs</option>
+      <option value="tappedKeg">Tapped Kegs</option>
+      <option value="untappedKeg">Untapped Kegs</option>
+    </select>
+  </div>
+  <div class="beer" *ngFor="let currentKeg of childKegList | tapped:filterByTappedness">
     <div class="info">
-    {{currentKeg.name}}, {{currentKeg.brand}}, ABV: {{currentKeg.abv}}, {{currentKeg.pints}} pints left, {{currentKeg.price}}
+    {{currentKeg.name}}, {{currentKeg.brand}}, ABV: {{currentKeg.abv}}, <span class="pints-info">{{currentKeg.pints}}</span> pints left, {{currentKeg.price}}
     </div>
     <div [class]="beerImg(currentKeg)">
     </div>
@@ -42,5 +49,11 @@ export class KegListComponent {
     } else {
       return "beer-dark";
     }
+  }
+
+  filterByTappedness: string = "tappedKeg";
+
+  onChange(pintsInKeg) {
+    this.filterByTappedness = pintsInKeg;
   }
 }
