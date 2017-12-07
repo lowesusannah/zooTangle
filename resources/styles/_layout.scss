@@ -3,12 +3,13 @@
 }
 
 body {
-  background-image: url("https://cdn.stocksnap.io/img-thumbs/960w/9EFACE8DD3.jpg");
+  background-image:url("https://cdn.stocksnap.io/img-thumbs/960w/9EFACE8DD3.jpg"), radial-gradient(circle,#804e0f,#3b003b);
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
+  background-position: 0 0, 0 10px, 0 0;
+  background-blend-mode: screen;
 }
 
 .title {
@@ -39,6 +40,7 @@ body {
   font-size: 1.5em;
   text-align: center;
   display: flex;
+  flex-direction: column; 
   flex-wrap: wrap;
   align-self: center;
   border-radius: 3px;
@@ -52,7 +54,7 @@ body {
   background-size: 50px;
   background-position: center;
   height: 70px;
-  width: 100px;
+  width: 70px;
   padding: 10px;
   background-color: white;
   border-radius: 100%;
@@ -62,6 +64,6 @@ body {
   @extend .beer-light;
 }
 
-button {
+.form {
 
 }
