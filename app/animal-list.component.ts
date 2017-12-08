@@ -5,22 +5,29 @@ import { Animal } from './animal.model';
   selector: 'animal-list',
   template: `
   <div class="animal-selector">
-    <select (change)="onChange($event.target.value)">
+    <select (change)= "onChange($event.target.value)">
       <option value="allAnimals" selected="selected">All Animals</option>
-      <option value="youngAnimals">Young Animals</option>
-      <option value="matureAnimals">Mature Animals</option>
+      <option value="young">Young Animals</option>
+      <option value="mature">Mature Animals</option>
     </select>
   </div>
-  <div class="animal" *ngFor="let currentAnimal of childAnimalList |  maturity">
+
+  <div class="animal" (click)="isMature(currentAnimal)" *ngFor="let currentAnimal of childAnimalList | maturity:filterByMaturity">
     <div class="info">
-    {{currentAnimal.species}}, {{currentAnimal.name}}, {{currentAnimal.age}}, {{currentAnimal.diet}}, {{currentAnimal.location}}, {{currentAnimal.caretakers}}, {{currentAnimal.sex}}, {{currentAnimal.likes}}, {{currentAnimal.dislikes}}
-    </div>
-    <div [class]="dietImg(currentAnimal)">
-    </div>
-    <div class="buttons">
+        <h3>{{currentAnimal.species}}</h3>
+        <h5>'{{currentAnimal.name}}'</h5>
+        <p> Age: {{currentAnimal.age}} <br>
+            Diet: {{currentAnimal.diet}} <br>
+            Location: {{currentAnimal.location}} <br>
+            Number of caretakers: {{currentAnimal.caretakers}} <br>
+            Sex: {{currentAnimal.sex}} <br>
+            Likes: {{currentAnimal.likes}} <br>
+            Dislikes: {{currentAnimal.dislikes}} <p>
+      </div>
+      <div [class]="dietImg(currentAnimal)">
+      </div>
       <button (click)="editButtonHasBeenClicked(currentAnimal)" type="button" name="edit">Edit Animal Record</button>
     </div>
-  </div>
   `
 })
 
@@ -44,7 +51,7 @@ export class AnimalListComponent {
 
   filterByMaturity: string = "allAnimals";
 
-  onChange(animalAge) {
-    this.filterByMaturity != this.filterByMaturity;
+  onChange(optionFromMenu) {
+    this.filterByMaturity = optionFromMenu;
   }
 }
