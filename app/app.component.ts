@@ -4,15 +4,19 @@ import { Keg } from './keg.model';
 @Component({
   selector: 'app-root',
   template: `
-  <div class="title">
-    <h1>Welcome to Tap Works</h1>
-    <h3>Check out what we have on tap!</h3>
-  </div>
-  <div class="beer-container">
-    <keg-list [childKegList]="masterKegList" (editSender)="editKeg($event);" (pourSender)="pourBeer($event)" (growlerSender)="pourGrowler($event)"></keg-list>
-  </div>
-  <edit-keg [childSelectedKeg]="selectedKeg" (doneButtonClickedSender)="finishedEditing"></edit-keg>
-  <new-keg (newKegSender)="addKeg($event)"></new-keg>
+    <div class="title">
+      <h1>Welcome to Tap Works</h1>
+      <h3>Check out what we have on tap!</h3>
+    </div>
+    <div class="body">
+      <div class="beer-container">
+        <keg-list [childKegList]="masterKegList" (editSender)="editKeg($event);" (pourSender)="pourBeer($event)" (growlerSender)="pourGrowler($event)"></keg-list>
+      </div>
+      <div class="add-edit-container">
+        <edit-keg [childSelectedKeg]="selectedKeg" (doneButtonClickedSender)="finishedEditing"></edit-keg>
+        <new-keg (newKegSender)="addKeg($event)"></new-keg>
+      </div>
+    </div>
    `
 })
 

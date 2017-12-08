@@ -10,15 +10,30 @@ body {
   background-size: cover;
   background-position: 0 0, 0 10px, 0 0;
   background-blend-mode: screen;
+  margin: 0;
+  padding: 0;
+}
+
+app-root {
+  height: 100%;
+  width: 100%;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
 }
 
 .title {
-  width: 95%;
+  width: 100%;
   background-color: rgba(0, 0, 0, 0.75);
   border-radius: 3px;
   text-align: center;
   padding: 10px;
-  margin-bottom: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 .beer-container {
@@ -69,4 +84,26 @@ body {
 
 .form {
 
+}
+
+
+.buttons {
+  width: 50%;
+}
+
+.add-edit-container {
+  width: 70%;
+  background-color: blue;
+  height: 350px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-self: center; 
+  .edit-keg {
+    width: 45%;
+  }
+  .new-keg {
+    width: 45%;
+    padding: 20px;
+  }
 }

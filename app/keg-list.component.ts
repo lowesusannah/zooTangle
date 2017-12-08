@@ -17,10 +17,12 @@ import { Keg } from './keg.model';
     </div>
     <div [class]="beerImg(currentKeg)">
     </div>
-  <button (click)="pourButtonHasBeenClicked(currentKeg)" type="button" name="pour">Beer Me!</button>
-  <button (click)="pourGrowlerButtonHasBeenClicked(currentKeg)" type="button" name="pour">Pour Growler</button>
-  <button (click)="editButtonHasBeenClicked(currentKeg)" type="button" name="edit">Edit Keg</button>
-  <button type="button" name="delete">Delete Keg</button>
+    <div class="buttons">
+      <button (click)="pourButtonHasBeenClicked(currentKeg)" type="button" name="pour">Beer Me!</button>
+      <button (click)="pourGrowlerButtonHasBeenClicked(currentKeg)" type="button" name="pour">Pour Growler</button>
+      <button (click)="editButtonHasBeenClicked(currentKeg)" type="button" name="edit">Edit Keg</button>
+      <button type="button" name="delete">Delete Keg</button>
+    </div>
   </div>
   `
 })
@@ -51,7 +53,7 @@ export class KegListComponent {
     }
   }
 
-  filterByTappedness: string = "tappedKeg";
+  filterByTappedness: string = "allKegs";
 
   onChange(pintsInKeg) {
     this.filterByTappedness = pintsInKeg;
