@@ -55,9 +55,8 @@ body {
   border-radius: 3px;
   padding: 10px;
 }
-
-.beer-light {
-  background-image: url("/resources/img/beer-light.png");
+.carnivore {
+  background-image: url("https://cdn.stocksnap.io/img-thumbs/960w/U8E3HKTZF9.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50px;
@@ -66,11 +65,18 @@ body {
   width: 70px;
   padding: 10px;
   background-color: white;
-  border-radius: 5px;
+  border-radius: 100%;
+  border: 3px solid white;
 }
-.beer-dark {
-  background-image: url("/resources/img/beer-dark.png");
-  @extend .beer-light;
+.herbivore {
+  @extend .carnivore;
+  background-image: url("https://cdn.stocksnap.io/img-thumbs/960w/F8B73CPSBK.jpg");
+}
+.omnivore {
+  @extend .carnivore;
+  background-image: url("https://cdn.stocksnap.io/img-thumbs/960w/F8B73CPSBK.jpg"), url("https://cdn.stocksnap.io/img-thumbs/960w/U8E3HKTZF9.jpg");
+  background-size: 50%;
+  background-repeat: repeat-y;
 }
 
 .info {

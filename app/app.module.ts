@@ -9,7 +9,7 @@ import { MaturityPipe } from './maturity.pipe';
 
 @NgModule({
   imports: [ BrowserModule,
-                    FormsModule],
+            FormsModule],
   declarations: [ AppComponent,
                   AnimalListComponent,
                   EditAnimalComponent,

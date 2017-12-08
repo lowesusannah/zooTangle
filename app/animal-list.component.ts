@@ -11,7 +11,7 @@ import { Animal } from './animal.model';
       <option value="matureAnimals">Mature Animals</option>
     </select>
   </div>
-  <div class="animal" *ngFor="let currentAnimal of childAnimalList |  maturity:filterbyMaturity">
+  <div class="animal" *ngFor="let currentAnimal of childAnimalList |  maturity">
     <div class="info">
     {{currentAnimal.species}}, {{currentAnimal.name}}, {{currentAnimal.age}}, {{currentAnimal.diet}}, {{currentAnimal.location}}, {{currentAnimal.caretakers}}, {{currentAnimal.sex}}, {{currentAnimal.likes}}, {{currentAnimal.dislikes}}
     </div>

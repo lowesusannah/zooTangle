@@ -2,12 +2,12 @@ import {Pipe, PipeTransform} from '@angular/core';
 import { Animal } from './animal.model';
 
 @Pipe ({
-  name: 'maturity',
+  name: "maturity",
   pure: false
 })
 
 export class MaturityPipe implements PipeTransform {
-  transform(input: Animal[], desiredTapped) {
+  transform(input: Animal[], desiredMaturity) {
     var output: Animal[] = [];
     if (desiredMaturity === "mature") {
       for (var i = 0; i < input.length; i++) {
