@@ -14,11 +14,6 @@ body {
   padding: 0;
 }
 
-app-root {
-  height: 100%;
-  width: 100%;
-}
-
 .body {
   display: flex;
   flex-direction: column;
@@ -37,7 +32,7 @@ app-root {
 }
 
 .beer-container {
-  height: 500px;
+  height: 30%;
   width: 83%;
   display: flex;
   justify-content:space-around;
@@ -71,7 +66,7 @@ app-root {
   width: 70px;
   padding: 10px;
   background-color: white;
-  border-radius: 100%;
+  border-radius: 5px;
 }
 .beer-dark {
   background-image: url("/resources/img/beer-dark.png");
@@ -93,17 +88,22 @@ app-root {
 
 .add-edit-container {
   width: 70%;
-  background-color: blue;
+  background-color: rgba(0, 0, 0, 0.5);
   height: 350px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  align-self: center; 
-  .edit-keg {
-    width: 45%;
+  align-self: center;
+  border-radius: 3px;
+    }
+
+  .add-keg {
+    width: 200px;
+    background-color: blue; 
+    input {
+      margin: 5px;
+    }
+    label {
+      margin: 5px;
+    }
   }
-  .new-keg {
-    width: 45%;
-    padding: 20px;
-  }
-}
