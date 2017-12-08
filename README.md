@@ -1,4 +1,4 @@
-# ZooTangle
+# zooTangle
 
 #### _Angular Database System: Solo One Day Project  December 8, 2017_
 
@@ -53,7 +53,7 @@ Dislikes: "Loud noises"  | Store all information in database |
 | User should be able to click on an animal to edit its name, age or caretakers.|
 
 ## Future development
-_In future iterations, I would like to integrate the jQuery UI to enable drag and drop functionality for the caretakers to easily move animals from location to location on a map to reflect any animal moves._
+_In future iterations, I would like to integrate the jQuery UI API to enable drag and drop functionality for the caretakers to easily move animals from location to location on a map to reflect any animal moves._
 
 ## Known Bugs
 
@@ -67,14 +67,10 @@ _Please feel free to reach out with any questions, etc. to lowesusannah@gmail.co
 
 ## Technologies Used
 
-* Angular (MVC model)
+* Angular JS (MVC model)
 * TypeScript
 * ES6 (JavaScript)
-* Node.js, including:
-  - Jasmine testing
-  - Karma test runner
-  - Bower
-  - Gulp
+* Node.js
 
 
 ### License

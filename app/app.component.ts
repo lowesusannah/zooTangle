@@ -1,20 +1,20 @@
 import { Component } from '@angular/core';
-import { Keg } from './keg.model';
+import { Animal } from './animal.model';
 
 @Component({
   selector: 'app-root',
   template: `
     <div class="title">
-      <h1>Welcome to Tap Works</h1>
-      <h3>Check out what we have on tap!</h3>
+      <h1>zooTangle</h1>
+      <h3>keeping your jungle in order</h3>
     </div>
     <div class="body">
-      <div class="beer-container">
-        <keg-list [childKegList]="masterKegList" (editSender)="editKeg($event);" (pourSender)="pourBeer($event)" (growlerSender)="pourGrowler($event)"></keg-list>
+      <div class="animal-container">
+        <animal-list [childAnimalList]="masterAnimalList" (editSender)="editAnimal($event)"></animal-list>
       </div>
       <div class="add-edit-container">
-        <edit-keg [childSelectedKeg]="selectedKeg" (doneButtonClickedSender)="finishedEditing"></edit-keg>
-        <new-keg (newKegSender)="addKeg($event)"></new-keg>
+        <edit-animal [childSelectedAnimal]="selectedAnimal" (doneButtonClickedSender)="finishedEditing"></edit-animal>
+        <new-animal (newAnimalSender)="addAnimal($event)"></new-animal>
       </div>
     </div>
    `
@@ -22,34 +22,23 @@ import { Keg } from './keg.model';
 
 export class AppComponent {
 
-public masterKegList: Keg[] = [
-  new Keg("Black Butte Porter", "Deschutes Brewery", "$8", 5.2),
-  new Keg("Jubelale", "Deschutes Brewery", "$7", 6.7),
-  new Keg("Lost Meridian", "Basecamp Brewing", "$6.50", 5.0),
-  new Keg("Hefe", "Widmer Brothers Brewing", "$5", 4.9),
+public masterAnimalList: Animal[] = [
+  new Animal("African red-billed hornbill", "Zazu", 1, "omnivore", "Howard Vollum Aviary", 1, "male", "small mice", "cold weather"),
+  new Animal("Dwarf mongoose", "Katya", 7, "omnivore", "Predators of the Serengeti Exhibit", 1, "female", "leading the pack", "other females"),
+  new Animal("Amur Leopard", "Borris", 4, "carnivore", "Amur Cats Habitat", 5, "male", "Old Spice", "boredom"),
+  new Animal("Harbor seal", "Atuun", 13, "carnivore", "Steller Cove", 2, "female", "chatting", "being ignored"),
 ];
 
-selectedKeg = null;
+selectedAnimal = null;
+  editAnimal(clickedAnimal) {
+    this.selectedAnimal = clickedAnimal;
+  }
 
-editKeg(clickedKeg) {
-  this.selectedKeg = clickedKeg;
-}
+  finishedEditing() {
+    this.selectedAnimal = null;
+  }
 
-finishedEditing() {
-  this.selectedKeg = null;
-}
-
-
-pourBeer(currentKeg) {
-  return currentKeg.pints--;
-}
-
-pourGrowler(currentKeg) {
-  return currentKeg.pints-=2;
-}
-
-addKeg(newKegFromChild: Keg) {
-  this.masterKegList.push(newKegFromChild);
-}
-
+  addAnimal(newAnimalFromChild: Animal) {
+    this.masterAnimalList.push(newAnimalFromChild);
+  }
 }

@@ -1,29 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Gochi+Hand|Lato|Nothing+You+Could+Do|Permanent+Marker|Shadows+Into+Light');
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Oswald:500');
 
 
-h1 {
-  font-family: 'Lato', sans-serif;
-  font-size: 4em;
-  color: white;
-}
+$main-color: #C1AF9F;
+$secondary-color: #B29173;
+$accent-color: #552300;
+$accent-color-2: #36302D;
 
-h3 {
-  @extend h1;
-  font-size: 2em;
-}
-
-.beer:nth-child(1) {
-  font-family: 'Shadows Into Light', cursive;
-}
-
-.beer:nth-child(2) {
-  font-family: 'Permanent Marker', cursive;
-}
-
-.beer:nth-child(3) {
-  font-family: 'Nothing You Could Do', cursive;
-}
-
-.beer:nth-child(4) {
-  font-family: 'Gochi Hand', cursive;
-}
+$font-family-display: 'Abril Fatface', cursive;
+$font-family-body: 'Oswald', sans-serif;
