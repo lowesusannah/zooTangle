@@ -31,7 +31,7 @@ _An app to help a local zoo replace their expensive software animal tracking dat
         - $npm install
         - $bower install
         - $gulp build
-        - $gulp watch (to preview live server updates)
+        - $gulp serve (to preview live server updates)
 
     3. If needed, ready for production by running command $gulp build --production
 
@@ -40,15 +40,7 @@ _An app to help a local zoo replace their expensive software animal tracking dat
 
 | Spec        | Example Input           | Example Output  |
 | ------------- |:-------------:| -----:|
-| Users should be able to add newly-admitted animals to the app via a form that includes fields for species, name, age, diet, location, caretakers needed, sex, one like and one dislike.  |   Species: "Arctic Fox"
-Name: "Moon"
-Age: 2
-Diet: "Carnivore"
-Location: "Northern Trail"
-Caretakers: 5
-Sex: "Female"
-Likes: "Cool shade"
-Dislikes: "Loud noises"  | Store all information in database |
+| Users should be able to add newly-admitted animals to the app via a form that includes fields for species, name, age, diet, location, caretakers needed, sex, one like and one dislike.  |   Species: "Arctic Fox", Name: "Moon", Age: 2, Diet: "Carnivore", Location: "Northern Trail", Caretakers: 5, Sex: "Female", Likes: "Cool shade", Dislikes: "Loud noises"  | Store all information in database |
 | Users should be able to view a list of animals logged.     |   Moon, Caramel and Lily information      | Display info. about each animal back to user     |   Users should be able to view all animals, only young animals under 2, and only mature animals that are 2 or older. |
 | User should be able to click on an animal to edit its name, age or caretakers.|
 
@@ -57,7 +49,7 @@ _In future iterations, I would like to integrate the jQuery UI API to enable dra
 
 ## Known Bugs
 
-_None at this time._
+_Errors with edit record and new record submissions. _
 
 
 ## Support and contact details
