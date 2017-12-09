@@ -12,7 +12,7 @@ import { Animal } from './animal.model';
     </select>
   </div>
 
-  <div class="animal" (click)="isMature(currentAnimal)" *ngFor="let currentAnimal of childAnimalList | maturity:filterByMaturity">
+  <div class="animal" (click)="(currentAnimal)" *ngFor="let currentAnimal of childAnimalList | maturity:filterByMaturity">
     <div class="info">
         <h3>{{currentAnimal.species}}</h3>
         <h5>'{{currentAnimal.name}}'</h5>
@@ -35,8 +35,8 @@ export class AnimalListComponent {
   @Input() childAnimalList: Animal[];
   @Output() editSender = new EventEmitter();
 
-  editButtonHasBeenClicked(kegToEdit: Animal) {
-    this.editSender.emit(kegToEdit);
+  editButtonHasBeenClicked(animalToEdit: Animal) {
+    this.editSender.emit(animalToEdit);
   }
 
   dietImg(currentAnimal) {

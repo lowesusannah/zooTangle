@@ -15,7 +15,6 @@ export class MaturityPipe implements PipeTransform {
           output.push(input[i]);
         }
       }
-      console.log("mature");
       return output;
     }
     else if (desiredMaturity === "young") {
@@ -24,11 +23,9 @@ export class MaturityPipe implements PipeTransform {
           output.push(input[i]);
         }
       }
-      console.log("young");
       return output;
     }
     else {
-      console.log("in neither mature nor young category - uh oh!");
       return input;
     }
   }

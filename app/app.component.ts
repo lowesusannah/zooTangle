@@ -26,15 +26,16 @@ public masterAnimalList: Animal[] = [
   new Animal("African red-billed hornbill", "Zazu", 1, "omnivore", "Howard Vollum Aviary", 1, "male", "small mice", "cold weather"),
   new Animal("Dwarf mongoose", "Katya", 7, "omnivore", "Predators of the Serengeti Exhibit", 1, "female", "leading the pack", "other females"),
   new Animal("Amur Leopard", "Borris", 4, "carnivore", "Amur Cats Habitat", 5, "male", "Old Spice", "boredom"),
-  new Animal("Harbor seal", "Atuun", 13, "carnivore", "Steller Cove", 2, "female", "chatting", "being ignored"),
+  new Animal("Harbor seal", "Atuun", 13, "carnivore", "Steller Cove", 2, "female", "chatting", "being ignored")
 ];
 
 selectedAnimal = null;
+
   editAnimal(clickedAnimal) {
     this.selectedAnimal = clickedAnimal;
   }
 
-  finishedEditing() {
+  doneButtonClicked() {
     this.selectedAnimal = null;
   }
 

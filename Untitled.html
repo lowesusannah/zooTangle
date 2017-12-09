@@ -1,0 +1,23 @@
+<form *ngIf="childSelectedAnimal" >
+  <h3>Edit {{selectedAnimal.name}}</h3>
+  <label>Edit Species:</label> <br>
+  <input [(ngModel)]="childSelectedAnimal.species">
+  <label>Edit Name:</label> <br>
+  <input [(ngModel)]="childSelectedAnimal.name">
+  <label>Edit Age:</label> <br>
+  <input [(ngModel)]="childSelectedAnimal.age">
+  <label>Edit Diet:</label> <br>
+  <input [(ngModel)]="childSelectedAnimal.diet">
+  <label>Edit Location:</label> <br>
+  <input [(ngModel)]="childSelectedAnimal.location">
+  <label>Edit caretakers:</label> <br>
+  <input [(ngModel)]="childSelectedAnimal.caretakers">
+  <label>Edit Sex:</label> <br>
+  <input [(ngModel)]="childSelectedAnimal.sex">
+  <label>Edit Likes:</label> <br>
+  <input [(ngModel)]="childSelectedAnimal.likes">
+  <label>Edit Dislikes:</label> <br>
+  <input [(ngModel)]="childSelectedAnimal.dislikes">
+  <br>
+  <button (click)="doneButtonClicked()">Done</button>
+</form>

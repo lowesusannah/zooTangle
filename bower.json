@@ -1,14 +1,20 @@
 {
-  "name": "taproom-project",
+  "name": "zooTangle",
   "description": "",
   "main": "",
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://github.com/lowesusannah/zooTangle",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "authors": [
+    "Susannah Lowe <lowesusannah@gmail.com>"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
 }
