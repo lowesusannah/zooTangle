@@ -2,48 +2,113 @@
   box-sizing: border-box;
 }
 
+app-root {
+  // background-image:url("https://cdn.stocksnap.io/img-thumbs/960w/9EFACE8DD3.jpg"), radial-gradient(circle, $main-color, $secondary-color);
+  // width: 100%;
+  // height: 100%;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-position: 0 0, 0 10px, 0 0;
+  // background-blend-mode: screen;
+  // margin: 0;
+  // padding: 0;
+}
+
 body {
-  background-image:url("https://cdn.stocksnap.io/img-thumbs/960w/9EFACE8DD3.jpg"), radial-gradient(circle,$main-color, $secondary-color);
-  width: 100%;
-  height: 100%;
+  background-image: url("https://cdn.stocksnap.io/img-thumbs/960w/6X0PULZQ5K.jpg");
+  background-size: 100%;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 0 0, 0 10px, 0 0;
-  background-blend-mode: screen;
-  margin: 0;
-  padding: 0;
+  background-position: top;
 }
 
 .body {
   display: flex;
-  flex-direction: column;
-  align-content: center;
   flex-wrap: wrap;
+  .animal-container {
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 10px;
+    .animal {
+      padding: 15px;
+      margin: 10px;
+      border-radius: 5px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      background-color: rgba(255, 255, 255, 0.9);
+      .info {
+        width: 60%;
+      }
+    }
+  }
+  .add-edit-container {
+    display: flex;
+    padding: 5px;
+    width: 400px;
+    height: 350px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+    .add-animal {
+      border-radius: 5px;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+      margin-left: 100px;
+      background-color: $main-color;
+      h3 {
+        width: 100%;
+        margin-bottom: 30px;
+        color: $accent-color;
+      }
+      label {
+        margin-top: 20px;
+        display: flex;
+        align-self: flex-start;
+      }
+      input {
+        display: flex;
+        align-self: flex-end;
+        margin: 5px;
+        margin-right: 100px;
+        border-radius: 2px;
+      }
+      button {
+        margin-top: 30px;
+        border: 3px solid $accent-color;
+        background-color: rgba(255, 255, 255, 0.85);
+        color: $accent-color;
+        font-weight: bold;
+      }
+    }
 }
+
+
 
 .title {
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 3px;
   text-align: center;
   padding: 10px;
   margin: 0;
-  padding: 0;
+  padding: 10px;
 }
 
 .items-container {
   height: 30%;
-  width: 83%;
+  width: 30%;
   display: flex;
-  justify-content:space-around;
   flex-wrap: wrap;
-  align-content: space-between;
 }
 
 .item {
   height: 210px;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   font-family: $font-family-body;
   font-weight: bold;
   font-size: 1.5em;
@@ -52,14 +117,14 @@ body {
   flex-direction: column;
   flex-wrap: wrap;
   align-self: center;
-  border-radius: 3px;
+  border-radius: 100%;
   padding: 10px;
 }
 .carnivore {
   background-image: url("https://cdn.stocksnap.io/img-thumbs/960w/U8E3HKTZF9.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50px;
+  background-size: cover;
   background-position: center;
   height: 70px;
   width: 70px;
@@ -75,44 +140,43 @@ body {
 .omnivore {
   @extend .carnivore;
   background-image: url("https://cdn.stocksnap.io/img-thumbs/960w/F8B73CPSBK.jpg"), url("https://cdn.stocksnap.io/img-thumbs/960w/U8E3HKTZF9.jpg");
-  background-size: 50%;
-  background-repeat: repeat-y;
+  background-size: cover;
+  background-repeat: repeat-x;
 }
-
-.info {
-  width: 50%;
-}
-
-.form {
-
-}
-
 
 .buttons {
   width: 50%;
+  padding: 5px;
+  height: 400px;
 }
 
-.add-edit-container {
-  display: none;
-  width: 70%;
-  height: 350px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-self: center;
-  border-radius: 3px;
-    }
-
-  .add-animal {
-    display: none;
-    width: 200px;
-    input {
-      margin: 5px;
-    }
-    label {
-      margin: 5px;
-    }
+edit-animal {
+  background-color: $main-color;
+  width: 500px;
+  padding: 20px;
+  top: 200px;
+  border-radius: 7px;
+  left: 300px;
+  h3 {
+    width: 100%;
+    color: $accent-color;
   }
+  label {
+    margin-top: 20px;
+    display: flex;
+    align-self: flex-start;
+  }
+  input {
+    display: flex;
+    align-self: flex-end;
+    margin: 5px;
+    margin-right: 100px;
+    border-radius: 2px;
+  }
+}
+
+edit-animal {
+}
 
   h1 {
     font-family: 'Abril Fatface', cursive;
@@ -126,3 +190,15 @@ body {
     font-weight: 100;
     color: $main-color;
   }
+
+  h5 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.25em;
+    font-weight: 100;
+    color: $accent-color-2;
+  }
+
+p {
+  color: $accent-color;
+  font-size: 1em;
+}

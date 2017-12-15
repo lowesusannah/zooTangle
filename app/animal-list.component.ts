@@ -26,7 +26,7 @@ import { Animal } from './animal.model';
       </div>
       <div [class]="dietImg(currentAnimal)">
       </div>
-      <button (click)="editButtonHasBeenClicked(currentAnimal)" type="button" name="edit">Edit Animal Record</button>
+      <button (click)="editButtonHasBeenClicked(currentAnimal)" type="button" name="edit">Edit</button>
     </div>
   `
 })

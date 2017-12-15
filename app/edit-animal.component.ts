@@ -5,7 +5,7 @@ import { Animal } from './animal.model';
   selector: 'edit-animal',
   template: `
   <div class="form" *ngIf="childSelectedAnimal" >
-    <h3>Edit {{selectedAnimal.name}}</h3>
+    <h3>Edit {{childSelectedAnimal.name}}</h3>
     <label>Edit Species:</label>
       <input [(ngModel)]="childSelectedAnimal.species" type="text">
     <label>Edit Name:</label>

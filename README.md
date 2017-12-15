@@ -13,19 +13,10 @@ _An app to help a local zoo replace their expensive software animal tracking dat
    * Node and Bower are installed on your machine globally
    * Knowledge of TypeScript and ES6 vocabulary and syntax
 
-  ### Installation Instructions:
-    1. Clone project from GitHub repository, by copying and pasting the url of this GitHub repository following the $git clone command into your favorite command line program, such as Terminal on Mac.  
-        - For example, $git clone https://github.com/nameOfUrl
-
-    2. In the command line run the following commands at the root level of your cloned repository folder:
-        - $npm install
-        - $bower install
-        - $gulp build
-        - $gulp serve (to preview live server updates)
 
   ### Installation Instructions:
     1. Clone project from GitHub repository, by copying and pasting the url of this GitHub repository following the $git clone command into your favorite command line program, such as Terminal on Mac.  
-        - For example, $git clone https://github.com/nameOfUrl
+        - $git clone https://github.com/lowesusannah/zooTangle.git
 
     2. In the command line run the following commands at the root level of your cloned repository folder:
         - $npm install
