@@ -15,48 +15,48 @@ app-root {
 }
 
 body {
-  background-image: url("https://cdn.stocksnap.io/img-thumbs/960w/6X0PULZQ5K.jpg");
-  background-size: 100%;
+  background-image:url("https://cdn.stocksnap.io/img-thumbs/960w/6X0PULZQ5K.jpg");
+  background-size: 125%;
   background-repeat: no-repeat;
   background-position: top;
+  background-color: rgba(85, 35, 0, 0.75);
 }
 
 .body {
   display: flex;
   flex-wrap: wrap;
   .animal-container {
-    width: 65%;
-    height: 100%;
+    width: 60vw;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     padding: 10px;
+    margin: 10px;
+    z-index: 1;
     .animal {
       padding: 15px;
       margin: 10px;
       border-radius: 5px;
       display: flex;
       flex-wrap: wrap;
-      flex-direction: column;
+      flex-direction: row;
+      width: 60vw;
       background-color: rgba(255, 255, 255, 0.9);
       .info {
-        width: 60%;
+        width: 50vw;
       }
     }
   }
   .add-edit-container {
-    display: flex;
+    margin-top: 45px;
+    margin-left: 50px;
     padding: 5px;
     width: 400px;
-    height: 350px;
-    display: flex;
-    flex-wrap: wrap;
+    z-index: 2;
   }
 
     .add-animal {
       border-radius: 5px;
-      display: flex;
-      flex-wrap: wrap;
       padding: 20px;
       margin-left: 100px;
       background-color: $main-color;
@@ -154,9 +154,12 @@ edit-animal {
   background-color: $main-color;
   width: 500px;
   padding: 20px;
-  top: 200px;
+  top: -500px;
   border-radius: 7px;
-  left: 300px;
+  left: 48vw;
+  z-index: 1000;
+  display: block;
+  margin-left: 100px;
   h3 {
     width: 100%;
     color: $accent-color;
